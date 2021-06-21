@@ -30,6 +30,14 @@ client.on('message', message => {
 
     if(command === 'ping'){
         client.commands.get('ping').execute(message, args)
+    }else{
+        if(command === "exile"){
+            client.commands.get('exile').execute(message, args)
+        }else{
+            if(command === "rank"){
+                client.commands.get('rank').execute(message, args)
+            }
+        }
     }
 })
 
