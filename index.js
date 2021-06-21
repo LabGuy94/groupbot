@@ -32,10 +32,18 @@ client.on('message', message => {
         client.commands.get('ping').execute(message, args)
     }else{
         if(command === "exile"){
-            client.commands.get('exile').execute(message, args)
+            if (message.member.hasPermission('ADMINISTRATOR')) {
+                client.commands.get('exile').execute(message, args)
+            }else{
+                message.channel.send("Requred Permission: ADMINISTRATOR")
+            }
         }else{
             if(command === "rank"){
+                if (message.member.hasPermission('ADMINISTRATOR')) {
                 client.commands.get('rank').execute(message, args)
+                }else{
+                    message.channel.send("Requred Permission: ADMINISTRATOR")
+                }
             }
         }
     }
