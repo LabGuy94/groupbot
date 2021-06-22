@@ -22,6 +22,18 @@ client.once('ready', () => {
     console.log("ready");
 })
 
+noblox.onShout(process.env.GROUPID).on("data", async function(data) {
+    const currentUser = await noblox.setCookie(process.env.COOKIE)
+    const shoutmessage = "User: " + data.username + " Message: " + data.body
+    client.channels.cache.get(process.env.SHOUTCHANNEL).send(shoutmessage);  
+})
+
+noblox.onWallPost(process.env.GROUPID).on("data", async function(data) {
+    const currentUser = await noblox.setCookie(process.env.COOKIE)
+    const wallmessage = "User: " + data.username + " Message: " + data.body
+    client.channels.cache.get(process.env.WALLCHANNEL).send(wallmessage);  
+})
+
 client.on('message', message => {
     if(!message.content.startsWith(prefix) || message.author.bot) return;
 
