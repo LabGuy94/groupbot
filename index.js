@@ -44,6 +44,14 @@ client.on('message', message => {
                 }else{
                     message.channel.send("Requred Permission: ADMINISTRATOR")
                 }
+            }else{
+                if(command === "getgrouprevenue"){
+                    if (message.member.hasPermission('ADMINISTRATOR')) {
+                        client.commands.get('getrev').execute(message, args)
+                    }else{
+                        message.channel.send("Requred Permission: ADMINISTRATOR")
+                    }
+                }
             }
         }
     }
