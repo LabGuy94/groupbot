@@ -51,6 +51,31 @@ client.on('message', message => {
                     }else{
                         message.channel.send("Requred Permission: ADMINISTRATOR")
                     }
+                }else{
+                    if(command === "shout"){
+                        if (message.member.hasPermission('ADMINISTRATOR')) {
+                            client.commands.get('shout').execute(message, args)
+                        }else{
+                            message.channel.send("Requred Permission: ADMINISTRATOR")
+                        }
+                    }else{
+                        if(command === "getauditlog"){
+                            if (message.member.hasPermission('ADMINISTRATOR')) {
+                                client.commands.get('getauditlog').execute(message, args)
+                            }else{
+                                message.channel.send("Requred Permission: ADMINISTRATOR")
+                            }
+                        }else{
+                            if(command === "grouppayout"){
+                                if (message.member.hasPermission('ADMINISTRATOR')) {
+                                    client.commands.get('grouppayout').execute(message, args)
+                                }else{
+                                    message.channel.send("Requred Permission: ADMINISTRATOR")
+                                }
+                            }else{
+                            }
+                        }
+                    }
                 }
             }
         }
