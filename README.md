@@ -65,7 +65,7 @@ A Node Js Discord bot that allows you to do actions from to to your roblox group
  I recommend https://hostsapling.net . Im in no way sponsored by them but their rates are so good for the service they provide. For just 50 cents a month you can host your bot 24/7. Once your in your pannel for host sapling just use an ftp client to upload your files and hit START!
 
 ## Conclusion ##
- If you have errors you can join my discord server found https://discord.gg/eWDuynAFzW and just ask in general your question.
+ If you have errors you can join my discord server found https://discord.gg/eWDuynAFzW and just ask in general your question and we can hopefully fix it!
  
  
 
