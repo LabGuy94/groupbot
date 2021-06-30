@@ -7,8 +7,12 @@ module.exports = {
         }
         const noblox = require('noblox.js')
         const currentUser = await noblox.setCookie(process.env.COOKIE)
-        noblox.shout(process.env.GROUPID, args[0])
-        message.reply("Completed, Shout is now :" + args[0])
+        let finalargs = ""
+        for(let i = 0; i < args.length; i++) {
+            finalargs = finalargs + " " + args[i]
+        }
+        noblox.shout(process.env.GROUPID, finalargs)
+        message.reply("Completed, Shout is now :" + finalargs)
         
     }
 }
