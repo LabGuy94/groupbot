@@ -61,11 +61,8 @@ A Node Js Discord bot that allows you to do actions from discord to your roblox 
     - Turn on discord developer mode and copy the id then paste it after WALLCHANNEL=
  
  ## Installing Dependencies ##
- type the following into your command line while in the folder
-
- - ```npm install discord.js```
- - ```npm install noblox.js```
- - ```npm install dotenv```
+ run the command
+ ```npm i```
  
  ## Testing ##
  To test your bot open a new terminal window and cd to your folder where the project is and do ```node .```
